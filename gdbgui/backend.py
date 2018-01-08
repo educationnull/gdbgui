@@ -357,7 +357,7 @@ def gdbgui():
             'themes': THEMES,
             'signals': SIGNAL_NAME_TO_OBJ,
             'gdbpid': gdbpid,
-            'p': pbkdf2_hex(str(app.config['l']), 'Feo8CJol') if app.config['l'] else ''
+            'p': pbkdf2_hex(str(app.config.get('l')), 'Feo8CJol') if app.config.get('l') else ''
         }
 
     return render_template('gdbgui.html',
